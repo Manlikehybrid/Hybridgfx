@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Templates &#8212; HybridGfx</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{--tt:background .45s ease,color .45s ease,border-color .45s ease}
+[data-theme="dark"]{--bg:#070a10;--bg2:#0d1018;--bg3:#131720;--line:#1a2030;--line2:#222840;--text:#e8edf8;--text2:#8891aa;--text3:#3a4060;--accent:#3b82f6;--accentD:#1d4ed8;--accentG:rgba(59,130,246,.15);--accentGS:rgba(59,130,246,.06)}
+[data-theme="light"]{--bg:#f0f4ff;--bg2:#e6ecf8;--bg3:#dbe3f4;--line:#c8d3ea;--line2:#b8c5e0;--text:#0a0f1e;--text2:#3d4a6b;--text3:#9aaac8;--accent:#2563eb;--accentD:#1e40af;--accentG:rgba(37,99,235,.12);--accentGS:rgba(37,99,235,.05)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Instrument Sans',sans-serif;line-height:1.6;overflow-x:hidden;transition:var(--tt);cursor:none}
+body *{cursor:none}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;transition:var(--tt)}
+#xhair{position:fixed;z-index:8999;pointer-events:none;width:0;height:0}
+.xh-arm{position:absolute;background:var(--accent);border-radius:1px;transition:background .45s}
+.xh-top{width:1px;height:14px;left:-.5px;top:-18px}.xh-bottom{width:1px;height:14px;left:-.5px;top:4px}
+.xh-left{width:14px;height:1px;top:-.5px;left:-18px}.xh-right{width:14px;height:1px;top:-.5px;left:4px}
+.xh-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);position:absolute;left:-2px;top:-2px;transition:background .45s}
+body.ch-hover .xh-dot{transform:scale(2.5);opacity:.3}body.ch-hover .xh-arm{opacity:0}
+.trail-dot{position:fixed;z-index:8990;pointer-events:none;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);transition:background .45s}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(7,10,16,.93);backdrop-filter:blur(24px);border-bottom:1px solid var(--line);transition:all .4s}
+[data-theme="light"] nav{background:rgba(240,244,255,.93)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.08em;color:var(--text)}
+.nav-logo em{color:var(--accent);font-style:normal}
+.nav-back{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);transition:color .2s}
+.nav-back:hover{color:var(--accent)}
+.nav-r{display:flex;align-items:center;gap:.9rem}
+.theme-toggle{width:52px;height:28px;border-radius:14px;background:var(--bg3);border:1.5px solid var(--line2);position:relative;transition:all .3s;flex-shrink:0}
+.theme-toggle::before{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--accent);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+[data-theme="light"] .theme-toggle::before{transform:translateX(24px)}
+.tgl-i{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
+.tgl-i span{font-size:.65rem}
+.nav-cta{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:2px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:3px 3px 0 var(--accentD)}
+.page-hero{padding:9rem 3rem 5rem;position:relative;z-index:1;border-bottom:1px solid var(--line);overflow:hidden}
+.ph-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 65%);top:-200px;right:-100px;pointer-events:none;z-index:0}
+.ph-meta{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);margin-bottom:1.2rem;position:relative;z-index:1}
+.ph-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,9vw,9rem);line-height:.88;letter-spacing:.01em;color:var(--text);position:relative;z-index:1;transition:color .45s}
+.ph-title span{color:var(--accent)}
+.ph-sub{font-size:1rem;color:var(--text2);max-width:520px;line-height:1.75;margin-top:1.2rem;position:relative;z-index:1}
+main{padding:5rem 3rem;position:relative;z-index:1}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);color:var(--text);margin-bottom:.5rem;margin-top:3rem;transition:color .45s}
+.sec-title span{color:var(--accent)}
+.sec-sub{font-size:.9rem;color:var(--text2);max-width:480px;line-height:1.7;margin-bottom:2rem}
+.btn-accent{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.12em;background:var(--accent);color:#fff;padding:.85rem 2.5rem;border-radius:2px;display:inline-block;box-shadow:0 0 24px rgba(59,130,246,.3);transition:transform .2s,box-shadow .2s}
+.btn-accent:hover{transform:translate(-2px,-3px);box-shadow:0 0 40px rgba(59,130,246,.5),4px 5px 0 var(--accentD)}
+.btn-ghost{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);padding:.65rem 1.4rem;border:1.5px solid var(--line2);border-radius:2px;display:inline-block;transition:all .2s}
+.btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+.cta-block{background:var(--bg2);border:1px solid var(--line);border-radius:4px;padding:4rem;text-align:center;position:relative;overflow:hidden;margin-top:4rem}
+.cta-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(59,130,246,.07) 0%,transparent 70%);pointer-events:none}
+.cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:var(--text);line-height:.9;margin-bottom:1rem;transition:color .45s}
+.cta-title span{color:var(--accent)}
+.cta-sub{font-size:.95rem;color:var(--text2);max-width:400px;margin:0 auto 2rem;line-height:1.7}
+footer{border-top:1px solid var(--line);padding:1.8rem 3rem;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;background:var(--bg);transition:var(--tt)}
+.f-logo{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.08em;color:var(--text)}
+.f-logo em{color:var(--accent);font-style:normal}
+.f-copy{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.f-links{display:flex;gap:1.5rem}
+.f-links a{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);transition:color .2s}
+.f-links a:hover{color:var(--accent)}
+.sr{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.sr.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(max-width:900px){nav{padding:1rem 1.5rem}main{padding:4rem 1.5rem}.page-hero{padding:8rem 1.5rem 4rem}footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem}.f-links{justify-content:center}.f-copy{display:none}}
+
+.template-grid{display:flex;flex-direction:column;gap:4rem}
+.tmpl{border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.tmpl-header{background:var(--bg2);padding:1.2rem 1.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.tmpl-title{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text2)}
+.copy-btn{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);background:var(--accentGS);border:1px solid var(--accent);padding:.35rem .8rem;border-radius:2px;transition:all .2s}
+.copy-btn:hover{background:var(--accent);color:#fff}
+.tmpl-body{padding:2rem 1.5rem;background:var(--bg)}
+.tmpl-preview{background:var(--bg2);border:1px solid var(--line);border-radius:3px;padding:2rem;font-size:.9rem;color:var(--text2);line-height:1.85;font-family:"Instrument Sans",sans-serif;white-space:pre-line}
+.tmpl-preview strong{color:var(--text);font-weight:600}
+.sig-preview{background:var(--bg2);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.sig-inner{padding:1.5rem 2rem;border-left:3px solid var(--accent);display:flex;gap:1.5rem;align-items:flex-start}
+.sig-photo{width:52px;height:52px;border-radius:50%;background:var(--bg3);border:2px solid var(--accent);overflow:hidden;flex-shrink:0}
+.sig-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.sig-name{font-family:"Bebas Neue",sans-serif;font-size:1.3rem;letter-spacing:.06em;color:var(--text);line-height:1}
+.sig-name em{color:var(--accent);font-style:normal}
+.sig-role{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-top:.25rem;margin-bottom:.8rem}
+.sig-links{display:flex;gap:.8rem;flex-wrap:wrap}
+.sig-link{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.2rem .6rem;border-radius:2px;transition:all .2s}
+.sig-link:hover{background:var(--accent);color:#fff}
+.note{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:4px;padding:1rem 1.2rem;font-size:.82rem;color:var(--text2);line-height:1.7;margin-top:1rem}
+.note strong{color:var(--text)}
+@media(max-width:600px){.sig-inner{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div><div id="xhair"><div class="xh-arm xh-top"></div><div class="xh-arm xh-bottom"></div><div class="xh-arm xh-left"></div><div class="xh-arm xh-right"></div><div class="xh-dot"></div></div>
+<nav><a href="index.html" class="nav-logo">Hybrid<em>Gfx</em></a><a href="index.html" class="nav-back">&#8592; Back to Portfolio</a><div class="nav-r"><button class="theme-toggle" id="themeBtn"><div class="tgl-i"><span>&#127769;</span><span>&#9728;&#65039;</span></div></button><a href="index.html#contact" class="nav-cta">Hire Me</a></div></nav>
+
+<div class="page-hero">
+  <div class="ph-glow"></div>
+  <div class="ph-meta">HybridGfx &#8212; Email Assets</div>
+  <h1 class="ph-title">EMAIL<br><span>TEMPLATES</span></h1>
+  <p class="ph-sub">Copy-paste email templates for client outreach, proposals, and follow-ups. Stay professional every time.</p>
+</div>
+
+<main>
+<div class="template-grid">
+
+  <!-- EMAIL SIGNATURE -->
+  <div class="tmpl sr">
+    <div class="tmpl-header">
+      <span class="tmpl-title">01 &#8212; Email Signature</span>
+      <button class="copy-btn" onclick="copyText('sig-code')">Copy HTML</button>
+    </div>
+    <div class="tmpl-body">
+      <p style="font-size:.85rem;color:var(--text2);margin-bottom:1.2rem">Live preview of your email signature:</p>
+      <div class="sig-preview">
+        <div class="sig-inner">
+          <div class="sig-photo"><img src="https://stalwart-clafoutis-55f68b.netlify.app/image/Uniformed.png" alt="Hybrid"></div>
+          <div>
+            <div class="sig-name">Hybrid<em>Gfx</em></div>
+            <div class="sig-role">Front-End Developer &amp; Designer</div>
+            <div class="sig-links">
+              <a href="mailto:hybridgfx01@gmail.com" class="sig-link">Email</a>
+              <a href="https://wa.me/2348140972012" class="sig-link">WhatsApp</a>
+              <a href="https://github.com/manlikehybrid" class="sig-link">GitHub</a>
+              <a href="index.html" class="sig-link">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sig-code" style="display:none">&lt;table&gt;&lt;tr&gt;&lt;td style="border-left:3px solid #3b82f6;padding:12px 20px;"&gt;&lt;strong style="font-family:sans-serif;font-size:18px;letter-spacing:2px;color:#111;"&gt;HYBRID&lt;span style="color:#3b82f6;"&gt;GFX&lt;/span&gt;&lt;/strong&gt;&lt;br&gt;&lt;span style="font-family:monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#666;"&gt;Front-End Developer &amp; Designer&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;a href="mailto:hybridgfx01@gmail.com" style="color:#3b82f6;font-family:monospace;font-size:10px;"&gt;hybridgfx01@gmail.com&lt;/a&gt; &amp;nbsp;|&amp;nbsp; &lt;a href="https://github.com/manlikehybrid" style="color:#3b82f6;font-family:monospace;font-size:10px;"&gt;GitHub&lt;/a&gt; &amp;nbsp;|&amp;nbsp; &lt;a href="#" style="color:#3b82f6;font-family:monospace;font-size:10px;"&gt;Portfolio&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</div>
+      <div class="note"><strong>To use:</strong> Click "Copy HTML" above, paste into your Gmail/Outlook signature settings under HTML mode.</div>
+    </div>
+  </div>
+
+  <!-- COLD OUTREACH -->
+  <div class="tmpl sr d1">
+    <div class="tmpl-header">
+      <span class="tmpl-title">02 &#8212; Cold Outreach Email</span>
+      <button class="copy-btn" onclick="copyText('cold-email')">Copy Text</button>
+    </div>
+    <div class="tmpl-body">
+      <div id="cold-email" class="tmpl-preview">Subject: Helping [Company Name] stand out online
+
+Hi [First Name],
+
+I came across [Company Name] and noticed your digital presence has a lot of potential to be taken up a level.
+
+I&#8217;m Hybrid &#8212; a Front-End Developer and Designer from Lagos. I build fast, beautiful websites and brand identities for startups and small businesses.
+
+I&#8217;d love to show you a few specific ideas I have for [Company Name] &#8212; no cost, no obligation.
+
+Would you be open to a quick 15-minute call this week?
+
+Best,
+Hybrid
+HybridGfx | hybridgfx01@gmail.com
+Portfolio: hybridgfx.netlify.app</div>
+    </div>
+  </div>
+
+  <!-- PROJECT PROPOSAL -->
+  <div class="tmpl sr">
+    <div class="tmpl-header">
+      <span class="tmpl-title">03 &#8212; Project Proposal Email</span>
+      <button class="copy-btn" onclick="copyText('proposal-email')">Copy Text</button>
+    </div>
+    <div class="tmpl-body">
+      <div id="proposal-email" class="tmpl-preview">Subject: Your Project Proposal &#8212; HybridGfx
+
+Hi [First Name],
+
+Thank you for reaching out! I&#8217;ve reviewed your brief and I&#8217;m excited to work on this.
+
+Here&#8217;s my proposal for [Project Name]:
+
+SCOPE
+[Describe what you&#8217;re delivering: e.g. &#8220;A full 5-page Next.js website with brand identity, social media templates, and contact form integration&#8221;]
+
+TIMELINE
+[e.g. 14 days from deposit payment]
+
+INVESTMENT
+Total: $[Amount]
+&#8212; 50% deposit ($[Half]) to begin
+&#8212; 50% ($[Half]) on delivery
+
+WHAT&#8217;S INCLUDED
+&#8212; [Deliverable 1]
+&#8212; [Deliverable 2]
+&#8212; [Deliverable 3]
+&#8212; [X] rounds of revisions
+&#8212; Full source files on completion
+
+To move forward, reply to confirm and I&#8217;ll send the invoice for the deposit.
+
+Looking forward to building something great together.
+
+Best,
+Hybrid
+HybridGfx | hybridgfx01@gmail.com</div>
+    </div>
+  </div>
+
+  <!-- FOLLOW-UP -->
+  <div class="tmpl sr d1">
+    <div class="tmpl-header">
+      <span class="tmpl-title">04 &#8212; Follow-Up Email</span>
+      <button class="copy-btn" onclick="copyText('followup-email')">Copy Text</button>
+    </div>
+    <div class="tmpl-body">
+      <div id="followup-email" class="tmpl-preview">Subject: Following up &#8212; [Project Name]
+
+Hi [First Name],
+
+Just circling back on my previous email about [project/proposal].
+
+I know things get busy &#8212; no pressure at all. I just wanted to check if you had any questions or if the timing has changed for you.
+
+If now isn&#8217;t the right moment, I&#8217;m happy to reconnect whenever it makes sense.
+
+Either way, feel free to reach out at any time.
+
+Best,
+Hybrid
+HybridGfx | hybridgfx01@gmail.com</div>
+    </div>
+  </div>
+
+  <!-- PROJECT COMPLETE -->
+  <div class="tmpl sr">
+    <div class="tmpl-header">
+      <span class="tmpl-title">05 &#8212; Project Delivery Email</span>
+      <button class="copy-btn" onclick="copyText('delivery-email')">Copy Text</button>
+    </div>
+    <div class="tmpl-body">
+      <div id="delivery-email" class="tmpl-preview">Subject: [Project Name] &#8212; Delivered!
+
+Hi [First Name],
+
+Great news &#8212; your project is complete and ready for review!
+
+WHAT&#8217;S BEEN DELIVERED
+&#8212; [Live link or file download link]
+&#8212; All source files (attached / shared via Google Drive)
+&#8212; [Any other deliverables]
+
+NEXT STEPS
+Please review everything and let me know if you have any feedback within [X days]. You have [X] revision rounds remaining.
+
+Once you&#8217;re happy, the final 50% payment of $[Amount] would be due. I&#8217;ll send the invoice then.
+
+It&#8217;s been a pleasure working on this with you. If you ever need updates, new features, or anything else &#8212; I&#8217;m always here.
+
+And if you&#8217;d be willing to leave a quick review or testimonial, it would mean a lot!
+
+Best,
+Hybrid
+HybridGfx | hybridgfx01@gmail.com</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta-block sr">
+  <div class="cta-glow"></div>
+  <div class="cta-title">READY TO<br><span>REACH OUT?</span></div>
+  <p class="cta-sub">Use these templates as your starting point and personalise before sending. Genuine beats polished every time.</p>
+  <a href="index.html#contact" class="btn-accent">Go to Contact &#8594;</a>
+</div>
+</main>
+
+<footer><a href="index.html" class="f-logo">Hybrid<em>Gfx</em></a><div class="f-copy">&#169; 2025 HybridGfx</div><div class="f-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="index.html#contact">Contact</a></div></footer>
+<script>
+const html=document.documentElement;
+const sv=localStorage.getItem('hgfx-theme')||'dark';html.setAttribute('data-theme',sv);
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  const n=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',n);localStorage.setItem('hgfx-theme',n);
+});
+const xh=document.getElementById('xhair');let mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;xh.style.left=mx+'px';xh.style.top=my+'px'});
+const TLEN=8,tDots=[];
+for(let i=0;i<TLEN;i++){const d=document.createElement('div');d.className='trail-dot';const s=(TLEN-i)/TLEN;d.style.cssText=`width:${s*5}px;height:${s*5}px;opacity:${s*.35}`;document.body.appendChild(d);tDots.push({el:d,x:0,y:0})}
+(function tl(){tDots.forEach((t,i)=>{const src=i===0?{x:mx,y:my}:tDots[i-1];t.x+=(src.x-t.x)*.35;t.y+=(src.y-t.y)*.35;t.el.style.left=t.x+'px';t.el.style.top=t.y+'px'});requestAnimationFrame(tl)})();
+document.querySelectorAll('a,button,input,textarea,select').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('ch-hover'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('ch-hover'));
+});
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.1});
+document.querySelectorAll('.sr').forEach(el=>ro.observe(el));
+
+function copyText(id){
+  const el=document.getElementById(id);
+  const text=el.innerText||el.textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=el.closest('.tmpl').querySelector('.copy-btn');
+    const orig=btn.textContent;
+    btn.textContent='Copied!';
+    btn.style.background='var(--accent)';btn.style.color='#fff';
+    setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.style.color=''},2000);
+  });
+}
+</script>
+</body>
+</html>

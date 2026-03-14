@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HybridGfx &#8212; Links</title>
+<meta name="description" content="HybridGfx &#8212; Front-End Developer and Designer from Lagos, Nigeria.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--tt:background .45s ease,color .45s ease,border-color .45s ease}
+[data-theme="dark"]{--bg:#070a10;--bg2:#0d1018;--bg3:#131720;--line:#1a2030;--line2:#222840;--text:#e8edf8;--text2:#8891aa;--text3:#3a4060;--accent:#3b82f6;--accentD:#1d4ed8;--accentG:rgba(59,130,246,.15)}
+[data-theme="light"]{--bg:#f0f4ff;--bg2:#e6ecf8;--bg3:#dbe3f4;--line:#c8d3ea;--line2:#b8c5e0;--text:#0a0f1e;--text2:#3d4a6b;--text3:#9aaac8;--accent:#2563eb;--accentD:#1e40af;--accentG:rgba(37,99,235,.12)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:"Instrument Sans",sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:3rem 1.5rem 5rem;position:relative;overflow-x:hidden;transition:var(--tt);cursor:none}
+body *{cursor:none}
+a{text-decoration:none;color:inherit}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;transition:var(--tt)}
+.glow1{position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 65%);top:-200px;right:-150px;pointer-events:none;z-index:0;animation:gp 8s ease-in-out infinite}
+.glow2{position:fixed;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%);bottom:-100px;left:-100px;pointer-events:none;z-index:0;animation:gp 6s ease-in-out 2s infinite}
+@keyframes gp{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+#xhair{position:fixed;z-index:8999;pointer-events:none;width:0;height:0}
+.xh-arm{position:absolute;background:var(--accent);border-radius:1px;transition:background .45s}
+.xh-top{width:1px;height:14px;left:-.5px;top:-18px}.xh-bottom{width:1px;height:14px;left:-.5px;top:4px}
+.xh-left{width:14px;height:1px;top:-.5px;left:-18px}.xh-right{width:14px;height:1px;top:-.5px;left:4px}
+.xh-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);position:absolute;left:-2px;top:-2px;transition:background .45s}
+body.ch-hover .xh-dot{transform:scale(2.5);opacity:.3}body.ch-hover .xh-arm{opacity:0}
+.trail-dot{position:fixed;z-index:8990;pointer-events:none;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);transition:background .45s}
+.wrap{width:100%;max-width:480px;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.toggle-wrap{width:100%;display:flex;justify-content:flex-end;margin-bottom:-.5rem}
+.theme-toggle{width:52px;height:28px;border-radius:14px;background:var(--bg3);border:1.5px solid var(--line2);position:relative;transition:all .3s;flex-shrink:0}
+.theme-toggle::before{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--accent);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+[data-theme="light"] .theme-toggle::before{transform:translateX(24px)}
+.tgl-i{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
+.tgl-i span{font-size:.65rem}
+.avatar{width:88px;height:88px;border-radius:50%;border:2px solid var(--accent);background:var(--bg2);overflow:hidden;box-shadow:0 0 30px rgba(59,130,246,.3);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:top}
+.bio-name{font-family:"Bebas Neue",sans-serif;font-size:2.2rem;letter-spacing:.06em;color:var(--text);text-align:center;line-height:1}
+.bio-name em{color:var(--accent);font-style:normal}
+.bio-role{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);text-align:center}
+.bio-avail{display:flex;align-items:center;gap:.5rem;font-family:"JetBrains Mono",monospace;font-size:.65rem;letter-spacing:.08em;color:var(--text2)}
+.dot-live{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.links-list{width:100%;display:flex;flex-direction:column;gap:.75rem}
+.link-item{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--bg2);border:1.5px solid var(--line2);border-radius:4px;transition:all .25s;position:relative;overflow:hidden}
+.link-item::before{content:"";position:absolute;inset:0;background:var(--accent);opacity:0;transition:opacity .25s}
+.link-item:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,130,246,.2)}
+.link-item:hover::before{opacity:.04}
+.link-icon{width:36px;height:36px;border-radius:3px;background:var(--bg3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;position:relative;z-index:1;transition:var(--tt)}
+.link-item:hover .link-icon{background:var(--accentG);border-color:var(--accent)}
+.link-body{flex:1;position:relative;z-index:1}
+.link-label{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text2);margin-bottom:.15rem}
+.link-title{font-size:.92rem;font-weight:600;color:var(--text);transition:color .25s}
+.link-item:hover .link-title{color:var(--accent)}
+.link-arrow{font-size:.85rem;color:var(--text3);position:relative;z-index:1;transition:color .25s,transform .25s}
+.link-item:hover .link-arrow{color:var(--accent);transform:translate(2px,-2px)}
+.link-divider{width:100%;display:flex;align-items:center;gap:.8rem}
+.link-divider span{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text3);white-space:nowrap}
+.link-divider::before,.link-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.link-item.accent-btn{background:var(--accent);border-color:var(--accent)}
+.link-item.accent-btn .link-label{color:rgba(255,255,255,.7)}
+.link-item.accent-btn .link-title{color:#fff}
+.link-item.accent-btn .link-icon{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.2)}
+.link-item.accent-btn .link-arrow{color:rgba(255,255,255,.7)}
+.link-item.accent-btn:hover{background:var(--accentD);border-color:var(--accentD);box-shadow:0 8px 24px rgba(59,130,246,.4)}
+.link-item.accent-btn::before{display:none}
+.footer-bio{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);text-align:center;margin-top:1rem}
+.sr{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.sr.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="glow1"></div>
+<div class="glow2"></div>
+<div id="xhair"><div class="xh-arm xh-top"></div><div class="xh-arm xh-bottom"></div><div class="xh-arm xh-left"></div><div class="xh-arm xh-right"></div><div class="xh-dot"></div></div>
+
+<div class="wrap">
+  <div class="toggle-wrap">
+    <button class="theme-toggle" id="themeBtn"><div class="tgl-i"><span>&#127769;</span><span>&#9728;&#65039;</span></div></button>
+  </div>
+  <div class="avatar sr"><img src="https://stalwart-clafoutis-55f68b.netlify.app/image/Uniformed.png" alt="Hybrid"></div>
+  <div class="bio-name sr">Hybrid<em>Gfx</em></div>
+  <div class="bio-role sr">Front-End Developer &amp; Designer</div>
+  <div class="bio-avail sr"><span class="dot-live"></span>Available for projects &#183; Lagos, Nigeria</div>
+
+  <div class="links-list">
+    <a href="index.html" class="link-item accent-btn sr">
+      <div class="link-icon">&#9875;</div>
+      <div class="link-body"><div class="link-label">Website</div><div class="link-title">View Full Portfolio</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+
+    <div class="link-divider sr"><span>Work</span></div>
+
+    <a href="index.html#portfolio" class="link-item sr">
+      <div class="link-icon">&#9632;</div>
+      <div class="link-body"><div class="link-label">Portfolio</div><div class="link-title">Featured Projects</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="case-study.html" class="link-item sr">
+      <div class="link-icon">&#128196;</div>
+      <div class="link-body"><div class="link-label">Case Study</div><div class="link-title">Aura Wellness Brand</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="services.html" class="link-item sr">
+      <div class="link-icon">&#9733;</div>
+      <div class="link-body"><div class="link-label">Services</div><div class="link-title">Pricing &amp; Packages</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+
+    <div class="link-divider sr"><span>Connect</span></div>
+
+    <a href="mailto:hybridgfx01@gmail.com" class="link-item sr">
+      <div class="link-icon">&#9993;</div>
+      <div class="link-body"><div class="link-label">Email</div><div class="link-title">hybridgfx01@gmail.com</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="https://wa.me/2348140972012" class="link-item sr">
+      <div class="link-icon">&#128172;</div>
+      <div class="link-body"><div class="link-label">WhatsApp</div><div class="link-title">Chat Directly</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="https://github.com/manlikehybrid" target="_blank" rel="noopener" class="link-item sr">
+      <div class="link-icon">&#9000;</div>
+      <div class="link-body"><div class="link-label">GitHub</div><div class="link-title">github.com/manlikehybrid</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="#" class="link-item sr">
+      <div class="link-icon">&#128247;</div>
+      <div class="link-body"><div class="link-label">Instagram</div><div class="link-title">@hybridgfx</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="#" class="link-item sr">
+      <div class="link-icon">&#127757;</div>
+      <div class="link-body"><div class="link-label">LinkedIn</div><div class="link-title">Connect on LinkedIn</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+    <a href="#" class="link-item sr">
+      <div class="link-icon">&#127912;</div>
+      <div class="link-body"><div class="link-label">Behance</div><div class="link-title">Design Portfolio</div></div>
+      <span class="link-arrow">&#8599;</span>
+    </a>
+
+    <div class="link-divider sr"><span>Download</span></div>
+    <a href="HybridGfx-CV.pdf" download class="link-item sr">
+      <div class="link-icon">&#128196;</div>
+      <div class="link-body"><div class="link-label">Resume / CV</div><div class="link-title">Download CV (PDF)</div></div>
+      <span class="link-arrow">&#8595;</span>
+    </a>
+  </div>
+
+  <div class="footer-bio sr">&#169; 2025 HybridGfx &#183; Lagos, Nigeria &#183; Open to Remote</div>
+</div>
+
+<script>
+const html=document.documentElement;
+const sv=localStorage.getItem('hgfx-theme')||'dark';html.setAttribute('data-theme',sv);
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  const n=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',n);localStorage.setItem('hgfx-theme',n);
+});
+const xh=document.getElementById('xhair');let mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;xh.style.left=mx+'px';xh.style.top=my+'px'});
+const TLEN=8,tDots=[];
+for(let i=0;i<TLEN;i++){const d=document.createElement('div');d.className='trail-dot';const s=(TLEN-i)/TLEN;d.style.cssText=`width:${s*5}px;height:${s*5}px;opacity:${s*.35}`;document.body.appendChild(d);tDots.push({el:d,x:0,y:0})}
+(function tl(){tDots.forEach((t,i)=>{const src=i===0?{x:mx,y:my}:tDots[i-1];t.x+=(src.x-t.x)*.35;t.y+=(src.y-t.y)*.35;t.el.style.left=t.x+'px';t.el.style.top=t.y+'px'});requestAnimationFrame(tl)})();
+document.querySelectorAll('a,button,input,textarea,select').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('ch-hover'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('ch-hover'));
+});
+const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.1});
+document.querySelectorAll('.sr').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>

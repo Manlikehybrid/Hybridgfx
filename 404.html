@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 &#8212; Page Not Found | HybridGfx</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--tt:background .45s ease,color .45s ease,border-color .45s ease}
+[data-theme="dark"]{--bg:#070a10;--bg2:#0d1018;--bg3:#131720;--line:#1a2030;--line2:#222840;--text:#e8edf8;--text2:#8891aa;--accent:#3b82f6;--accentD:#1d4ed8;--accentG:rgba(59,130,246,.15)}
+[data-theme="light"]{--bg:#f0f4ff;--bg2:#e6ecf8;--bg3:#dbe3f4;--line:#c8d3ea;--line2:#b8c5e0;--text:#0a0f1e;--text2:#3d4a6b;--accent:#2563eb;--accentD:#1e40af;--accentG:rgba(37,99,235,.12)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:"Instrument Sans",sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;position:relative;overflow:hidden;transition:var(--tt);cursor:none}
+body *{cursor:none}
+a{text-decoration:none;color:inherit}
+.grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35}
+.glow{position:fixed;width:700px;height:700px;background:radial-gradient(circle,rgba(59,130,246,.1) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0}
+#xhair{position:fixed;z-index:8999;pointer-events:none;width:0;height:0}
+.xh-arm{position:absolute;background:var(--accent);border-radius:1px;transition:background .45s}
+.xh-top{width:1px;height:14px;left:-.5px;top:-18px}.xh-bottom{width:1px;height:14px;left:-.5px;top:4px}
+.xh-left{width:14px;height:1px;top:-.5px;left:-18px}.xh-right{width:14px;height:1px;top:-.5px;left:4px}
+.xh-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);position:absolute;left:-2px;top:-2px}
+.trail-dot{position:fixed;z-index:8990;pointer-events:none;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%)}
+.wrap{position:relative;z-index:1;max-width:560px}
+.big-num{font-family:"Bebas Neue",sans-serif;font-size:clamp(8rem,20vw,18rem);line-height:.85;color:transparent;-webkit-text-stroke:2px var(--accent);letter-spacing:-.02em;animation:flicker 4s ease-in-out infinite;opacity:.6}
+@keyframes flicker{0%,100%{opacity:.6}45%{opacity:.5}50%{opacity:.8}55%{opacity:.5}60%{opacity:.6}}
+.err-code{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem}
+.err-title{font-family:"Bebas Neue",sans-serif;font-size:clamp(2rem,5vw,4rem);color:var(--text);margin-bottom:.8rem;letter-spacing:.02em;transition:color .45s}
+.err-sub{font-size:.95rem;color:var(--text2);line-height:1.75;max-width:380px;margin:0 auto 2.5rem}
+.err-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-main{font-family:"Bebas Neue",sans-serif;font-size:1.1rem;letter-spacing:.12em;background:var(--accent);color:#fff;padding:.8rem 2rem;border-radius:2px;box-shadow:0 0 24px rgba(59,130,246,.3);transition:transform .2s,box-shadow .2s;display:inline-block}
+.btn-main:hover{transform:translate(-2px,-3px);box-shadow:0 0 40px rgba(59,130,246,.5),4px 5px 0 var(--accentD)}
+.btn-ghost{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);padding:.65rem 1.4rem;border:1.5px solid var(--line2);border-radius:2px;display:inline-block;transition:all .2s}
+.btn-ghost:hover{color:var(--accent);border-color:var(--accent)}
+.brand{position:absolute;top:1.5rem;left:50%;transform:translateX(-50%);font-family:"Bebas Neue",sans-serif;font-size:1.4rem;letter-spacing:.08em;color:var(--text)}
+.brand em{color:var(--accent);font-style:normal}
+.theme-toggle{position:absolute;top:1.5rem;right:2rem;width:52px;height:28px;border-radius:14px;background:var(--bg3);border:1.5px solid var(--line2);position:absolute;top:1.5rem;right:2rem;transition:all .3s;z-index:2}
+.theme-toggle::before{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--accent);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+[data-theme="light"] .theme-toggle::before{transform:translateX(24px)}
+.tgl-i{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
+.tgl-i span{font-size:.65rem}
+.countdown{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.08em;color:var(--text2);margin-top:2rem}
+.countdown span{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="glow"></div>
+<div id="xhair"><div class="xh-arm xh-top"></div><div class="xh-arm xh-bottom"></div><div class="xh-arm xh-left"></div><div class="xh-arm xh-right"></div><div class="xh-dot"></div></div>
+<a href="index.html" class="brand">Hybrid<em>Gfx</em></a>
+<button class="theme-toggle" id="themeBtn"><div class="tgl-i"><span>&#127769;</span><span>&#9728;&#65039;</span></div></button>
+
+<div class="wrap">
+  <div class="big-num">404</div>
+  <div class="err-code">Error 404 &#8212; Page Not Found</div>
+  <h1 class="err-title">Nothing to see here.</h1>
+  <p class="err-sub">The page you&#8217;re looking for doesn&#8217;t exist or may have moved. Let&#8217;s get you back on track.</p>
+  <div class="err-links">
+    <a href="index.html" class="btn-main">&#8592; Back to Portfolio</a>
+    <a href="index.html#contact" class="btn-ghost">Contact Me</a>
+  </div>
+  <div class="countdown">Redirecting in <span id="count">10</span> seconds&#8230;</div>
+</div>
+
+<script>
+const html=document.documentElement;
+const sv=localStorage.getItem('hgfx-theme')||'dark';html.setAttribute('data-theme',sv);
+document.getElementById('themeBtn').addEventListener('click',()=>{const n=html.getAttribute('data-theme')==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('hgfx-theme',n)});
+const xh=document.getElementById('xhair');let mx=0,my=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;xh.style.left=mx+'px';xh.style.top=my+'px'});
+const TLEN=8,tDots=[];
+for(let i=0;i<TLEN;i++){const d=document.createElement('div');d.className='trail-dot';const s=(TLEN-i)/TLEN;d.style.cssText=`width:${s*5}px;height:${s*5}px;opacity:${s*.35}`;document.body.appendChild(d);tDots.push({el:d,x:0,y:0})}
+(function tl(){tDots.forEach((t,i)=>{const src=i===0?{x:mx,y:my}:tDots[i-1];t.x+=(src.x-t.x)*.35;t.y+=(src.y-t.y)*.35;t.el.style.left=t.x+'px';t.el.style.top=t.y+'px'});requestAnimationFrame(tl)})();
+let n=10;const cd=document.getElementById('count');
+const t=setInterval(()=>{n--;cd.textContent=n;if(n<=0){clearInterval(t);window.location.href='index.html'}},1000);
+document.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>clearInterval(t)));
+</script>
+</body>
+</html>
